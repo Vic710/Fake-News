@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Article Input</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+</head>
+
+<body>
+
+  <audio id="popSound">
+    <source src="pop.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="news-background"></div>
+
+  <div class="container">
+    <h1>Enter News Article</h1>
+    <input type="text" id="title" placeholder="Enter title">
+    <textarea id="content" placeholder="Enter content"></textarea>
+    <button onclick="addNews()">Add Article</button>
+    <div class="news-container" id="newsContainer"></div>
+  </div>
+
+  <div class="popup" id="fakePopup">
+    <span class="popup-close" onclick="closePopup('fakePopup')">&times;</span>
+    <h2>Fake News Detected!</h2>
+    <p>This news article is likely fake.</p>
+  </div>
+
+  <div class="popup" id="realPopup">
+    <span class="popup-close" onclick="closePopup('realPopup')">&times;</span>
+    <h2>Real News Detected!</h2>
+    <p>This news article is likely real.</p>
+  </div>
+
+  <div class="nav-bar">
+    <a href="history.html" class="history-button">Check History</a>
+  </div>
+
+  <script src="scripts.js"></script> <!-- Link to external JavaScript file -->
+
+</body>
+
+</html>
